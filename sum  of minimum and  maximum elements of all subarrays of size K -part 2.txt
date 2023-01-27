@@ -1,0 +1,31 @@
+#include<vector>
+
+long long sumOfMaxAndMin(vector<int> &nums, int n, int k) {
+	
+	long long totalSum = 0;
+
+	for (int i = 0; i <= n-k; i++) {
+
+		// Stores minimum value for this window.
+		long long minCurrent = 10e9;
+
+		// Stores maximum value for this window.
+		long long maxCurrent = -1;	
+
+		for (int j = i; j < i+k; j++) {
+			if(nums[j]<minCurrent) {
+				minCurrent = nums[j];
+			}
+
+			if(nums[j]>maxCurrent) {
+				maxCurrent = nums[j];
+			}
+
+		}
+
+		
+		totalSum += minCurrent + maxCurrent;	
+	}
+    
+    return totalSum;
+}
