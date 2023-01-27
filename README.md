@@ -1,0 +1,1 @@
+# sum-of-minimum-and-maximum-elements-of-all-subarrays-of-size-K--part-2
